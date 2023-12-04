@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "1271938a-c7fd-40cc-861b-5eba978397ef",
+		"name": "Starwars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29635164"
+	},
+	"item": [
+		{
+			"name": "People",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Масса - тип Строка\", function () {\r",
+							"    pm.expect(typeof jsonData.mass).equal(\"string\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Масса - больше 0\", function () {\r",
+							"    pm.expect(Number(jsonData.mass)).to.be.above(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Гендер - один из двух\", function () {\r",
+							"    var expectedValues = [\"male\", \"female\"];\r",
+							"    pm.expect(jsonData.gender).to.be.oneOf(expectedValues);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}api/people/10/",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"people",
+						"10",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Planet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Статус - 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Резиденты - Массив\", function () {\r",
+							"    pm.expect(jsonData.residents).to.be.an(\"array\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Террейн - На планете более одного биома\", function () {\r",
+							"    pm.expect(jsonData.terrain).to.include(\",\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}api/planets/7/",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"planets",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Starships",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Header - Content-Type - application/json\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"content-type\")).to.equal(\"application/json\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Пилоты - Отсутствуют\", function () {\r",
+							"    pm.expect(jsonData.pilots).to.be.an(\"array\").that.has.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Время отклика меньше 53ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(53);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}api/starships/5/",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"starships",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://swapi.py4e.com/",
+			"type": "string"
+		}
+	]
+}

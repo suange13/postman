@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "c56f9e4a-1359-4159-bef2-0fc50e521f00",
+		"name": "Kopeika",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29635164"
+	},
+	"item": [
+		{
+			"name": "https://kopeika.qa.studio/get_currency/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authority",
+						"value": "kopeika.qa.studio"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "cookie",
+						"value": "__ddg1_=5h8PbPsLlpYxLya127A8; _ym_uid=1690031603561687204; _ym_d=1690031603; tmr_lvid=02e244d952a601a6413e30e9b2162c44; tmr_lvidTS=1690031602661; __utmz=154923576.1690037899.2.2.utmcsr=yandex|utmccn=(organic)|utmcmd=organic; __utma=154923576.157678246.1690031602.1692725172.1692830520.11; __utmz=266614164.1695751248.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=266614164.52142304.1695751248.1695751248.1697467672.2"
+					},
+					{
+						"key": "referer",
+						"value": "https://kopeika.qa.studio/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+					}
+				],
+				"url": {
+					"raw": "https://kopeika.qa.studio/get_currency/",
+					"protocol": "https",
+					"host": [
+						"kopeika",
+						"qa",
+						"studio"
+					],
+					"path": [
+						"get_currency",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "https://kopeika.qa.studio/get_currency/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "kopeika.qa.studio"
+							},
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+							},
+							{
+								"key": "cookie",
+								"value": "__ddg1_=5h8PbPsLlpYxLya127A8; _ym_uid=1690031603561687204; _ym_d=1690031603; tmr_lvid=02e244d952a601a6413e30e9b2162c44; tmr_lvidTS=1690031602661; __utmz=154923576.1690037899.2.2.utmcsr=yandex|utmccn=(organic)|utmcmd=organic; __utma=154923576.157678246.1690031602.1692725172.1692830520.11; __utmz=266614164.1695751248.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=266614164.52142304.1695751248.1695751248.1697467672.2"
+							},
+							{
+								"key": "referer",
+								"value": "https://kopeika.qa.studio/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+							}
+						],
+						"url": {
+							"raw": "https://kopeika.qa.studio/get_currency/",
+							"protocol": "https",
+							"host": [
+								"kopeika",
+								"qa",
+								"studio"
+							],
+							"path": [
+								"get_currency",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"usd\": 8152,\r\n    \"euro\":8954\r\n}"
+				}
+			]
+		}
+	]
+}
